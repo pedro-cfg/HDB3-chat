@@ -2,6 +2,7 @@ import tkinter as tk
 
 text = 'こんにちは'
 
+
 class App(tk.Frame):
     def build_sender_frame(self):
         frame = tk.Frame(self, borderwidth=2, relief='groove')
