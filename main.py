@@ -63,6 +63,7 @@ class App(tk.Frame):
         font = ("Arial", 20) 
         self.data_out['font'] = font
 
+        self.my_ip = tk.StringVar(value=self.c.get_ip_address())
         myIP = tk.Frame(frame, relief='groove')
         myIP.grid(row=0, column=0, sticky=(tk.W, tk.E))
         myIP.columnconfigure(0,weight = 1)
@@ -124,7 +125,6 @@ class App(tk.Frame):
         self.c = conn()
         self.receive_active = False
         self.receiver_thread = None
-        self.my_ip = tk.StringVar(value=self.c.get_ip_address())
         
         self.button_frame = tk.Frame(self)
         self.button_frame.pack()
